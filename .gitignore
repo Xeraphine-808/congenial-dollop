@@ -1,13 +1,16 @@
-/tailscale-cs
-/work_area*
-composer.*
-/Python*
-*.output
-/Modgest
-/thanos
-/vendor
-/bkdir
-*.pyc
-*.msp
+playit
 *.msx
-*.py
+*.log
+servidor_minecraft/logs/
+servidor_minecraft/debug/
+playit.status
+playit.tunnels
+# Generado por mc_manager.py
+crash-reports/
+*.tmp
+*.lock
+__pycache__/
+playit.log
+manager.log
+
+# mc_manager
