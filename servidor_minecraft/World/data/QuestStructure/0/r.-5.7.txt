@@ -1,0 +1,9 @@
+RLCraft_SmallUndergroundSkeleton,-2959,-2951,3637,3645
+DinosaurSkeleton,-2863,-2854,3801,3847
+DinosaurSkeleton,-2821,-2775,3921,3930
+ShrineSmallAir,-2790,-2782,3778,3786
+SmallOutpost,-2787,-2757,3850,3872
+RLCraft_4Towers,-2730,-2678,3848,3908
+StoneIceBoulder3,-2611,-2601,3836,3846
+UndergroundCrypt,-2617,-2589,3908,3922
+RLCraft_LargeUndergroundTown,-2753,-2640,3967,4104

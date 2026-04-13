@@ -1,0 +1,6 @@
+RLCraft_SmallUndergroundSkeleton,-5099,-5091,-3597,-3589
+StonePlantMound4,-5093,-5086,-4080,-4073
+UndergroundTreeoid,-5059,-5036,-3984,-3958
+RLCraft_BasicSpider,-5037,-5037,-4014,-4014
+RLCraft_UndergroundRuin1,-5040,-5031,-4017,-4008
+BlazeSpawnerCrystal,-4892,-4886,-4078,-4072

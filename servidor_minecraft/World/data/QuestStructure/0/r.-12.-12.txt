@@ -1,0 +1,5 @@
+ShrineSmallAir,-6245,-6237,-6154,-6146
+RLCraft_DecentCaveSpider,-6298,-6298,-6175,-6175
+RLCraft_UndergroundRuin2,-6303,-6296,-6180,-6170
+ShrineSmallAir,-6161,-6153,-6267,-6259
+UndergroundTreeoid,-6165,-6139,-6310,-6287

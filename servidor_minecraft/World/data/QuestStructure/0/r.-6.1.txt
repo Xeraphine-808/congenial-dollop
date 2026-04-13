@@ -1,0 +1,9 @@
+RLCraft_BasicWitch,-3310,-3310,580,580
+RLCraft_UndergroundRuin1,-3316,-3307,577,586
+RLCraft_UndergroundFarm,-3239,-3196,627,669
+RLCraft_BasicSpider,-3336,-3336,682,682
+RLCraft_UndergroundRuin1,-3339,-3330,676,685
+BlazeSpawnerCrystal,-3285,-3279,754,760
+RLCraft_DecentSkeleton,-3296,-3296,907,907
+RLCraft_UndergroundRuin3,-3302,-3294,904,912
+P_IslandCity,-3303,-2969,757,1063

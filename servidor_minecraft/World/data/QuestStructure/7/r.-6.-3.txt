@@ -1,0 +1,16 @@
+BrickHenge,-3331,-3315,-1544,-1528
+RLCraft_BasicWitch,-3231,-3231,-1548,-1548
+RLCraft_UndergroundRuin1,-3237,-3228,-1554,-1545
+P_SpookyHouse,-3280,-3240,-1619,-1593
+RLCraft_BasicCaveSpider,-3230,-3230,-1654,-1654
+RLCraft_UndergroundRuin1,-3233,-3224,-1657,-1648
+AbandonedWoodTower,-3277,-3247,-1707,-1671
+StoneBoulder,-3138,-3129,-1665,-1656
+ForestBeacon,-3295,-3287,-1714,-1706
+StonePlantMound3,-3252,-3241,-1724,-1715
+SmallWoodenCottage2,-3347,-3339,-1667,-1659
+RLCraft_SmallUndergroundSkeleton,-3359,-3351,-1571,-1563
+SmallWoodenCottage,-3175,-3164,-1741,-1733
+RLCraft_DecentCaveSpider,-3189,-3189,-1766,-1766
+RLCraft_UndergroundRuin3,-3195,-3187,-1769,-1761
+StonePlantBoulder,-3089,-3079,-1836,-1826

@@ -1,0 +1,4 @@
+StonePlantBoulder,-4277,-4267,-6795,-6785
+MysticalTree,-4333,-4318,-6828,-6812
+SmallWoodenCottage1,-4145,-4139,-6815,-6804
+SmallAbandonedMine,-4168,-4153,-6848,-6823

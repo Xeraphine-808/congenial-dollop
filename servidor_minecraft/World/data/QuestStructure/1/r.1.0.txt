@@ -1,0 +1,6 @@
+RLCraft_End_Obsidian_Spike_3,898,914,479,505
+RLCraft_End_Floating_Crystal,948,962,279,293
+RLCraft_End_Ship_Split_Front,876,900,-143,-128
+RLCraft_End_Defiled_Island,1009,1023,-385,-373
+RLCraft_End_Meteor_Site,956,977,-411,-376
+RLCraft_End_Ship_Split_Back,954,978,-440,-425

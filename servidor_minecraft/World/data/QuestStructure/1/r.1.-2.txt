@@ -1,0 +1,6 @@
+RLCraft_End_MegaCity_Top_Treasure,527,541,-1269,-1255
+RLCraft_End_MegaCity_Vertical_Aberrant,531,537,-1265,-1259
+RLCraft_End_MegaCity_Base,527,541,-1269,-1255
+RLCraft_End_MegaCity_Start,527,527,-1269,-1269
+RLCraft_End_Floating_Hut,550,560,-1458,-1448
+RLCraft_End_Decoration_2,610,620,-1512,-1502

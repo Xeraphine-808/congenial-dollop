@@ -1,0 +1,5 @@
+RLCraft_AgentStarbuck_WaterBase,-5705,-5688,-1939,-1927
+P_SmallShip,-5797,-5791,-1825,-1805
+RLCraft_DecentSkeleton,-5831,-5831,-1899,-1899
+RLCraft_UndergroundRuin3,-5833,-5825,-1902,-1894
+RLCraft_AgentStarbuck_WaterBase,-5685,-5668,-1546,-1534

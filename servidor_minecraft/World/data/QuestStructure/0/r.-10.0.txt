@@ -1,0 +1,3 @@
+PeacefulCrypt,-5241,-5217,221,237
+RLCraft_BasicCaveSpider,-5190,-5190,190,190
+RLCraft_UndergroundRuin1,-5193,-5184,187,196

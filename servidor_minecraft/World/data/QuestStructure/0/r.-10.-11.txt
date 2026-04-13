@@ -1,0 +1,15 @@
+StoneMazePath,-5171,-5169,-5638,-5636
+StoneMazePath,-5174,-5172,-5638,-5636
+StoneMazeShootingRange,-5174,-5166,-5644,-5639
+StoneMazePath,-5174,-5172,-5647,-5645
+StoneMazePath,-5168,-5166,-5638,-5636
+StoneMazeEndChest,-5177,-5175,-5647,-5645
+StoneMazeEndChest,-5165,-5163,-5638,-5636
+StoneMazePathBig,-5183,-5175,-5641,-5633
+StoneMazePathBig,-5192,-5184,-5641,-5633
+StoneMazePath,-5195,-5193,-5638,-5636
+StoneMazePath,-5189,-5187,-5644,-5642
+StoneMazeSpiderRoom,-5186,-5181,-5647,-5642
+StoneMazePath,-5198,-5196,-5638,-5636
+StoneMazeEndChest,-5198,-5196,-5641,-5639
+ShrineSmallAir,-5315,-5307,-5757,-5749

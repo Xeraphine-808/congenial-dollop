@@ -1,0 +1,6 @@
+RLCraft_NetherMobs_WitherSkeleton,-241,-241,-522,-522
+RLCraft_NetherMobs_Skeleton,-239,-239,-520,-520
+RLCraft_NetherCity_Enchanting,-246,-236,-526,-516
+NetherThorn3,-141,-123,-530,-504
+NetherThorn2,-161,-149,-533,-520
+NetherThorn5,-432,-407,-567,-556

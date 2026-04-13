@@ -1,0 +1,5 @@
+Flagship,-3576,-3461,1011,1054
+RLCraft_DecentWitch,-3268,-3268,1075,1075
+RLCraft_UndergroundRuin3,-3273,-3265,1073,1081
+RLCraft_DecentSpider,-3364,-3364,1489,1489
+RLCraft_UndergroundRuin3,-3367,-3359,1483,1491

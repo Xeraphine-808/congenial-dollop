@@ -1,0 +1,5 @@
+DinosaurSkull,-7715,-7696,-2876,-2865
+RLCraft_LargeUndergroundTown,-7754,-7617,-2867,-2754
+StoneIceBoulder1,-7758,-7748,-2889,-2879
+RLCraft_DecentSkeleton,-7755,-7755,-2928,-2928
+RLCraft_UndergroundRuin2,-7760,-7750,-2933,-2926

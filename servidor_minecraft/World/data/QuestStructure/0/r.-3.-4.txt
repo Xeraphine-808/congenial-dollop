@@ -1,0 +1,12 @@
+StonePlantMound2,-1574,-1561,-2054,-2042
+StonePlantBoulder,-1589,-1579,-2205,-2195
+StonePlantBoulder,-1566,-1556,-2228,-2218
+StoneLeafMound,-1755,-1748,-2122,-2113
+RLCraft_DecentZombie,-1773,-1773,-2159,-2159
+RLCraft_UndergroundRuin2,-1778,-1768,-2164,-2157
+RLCraft_DecentSkeleton,-2037,-2037,-2164,-2164
+RLCraft_UndergroundRuin3,-2043,-2035,-2169,-2161
+RLCraft_BasicCaveSpider,-1997,-1997,-2179,-2179
+RLCraft_UndergroundRuin1,-2000,-1991,-2182,-2173
+SpiderPit,-2034,-2025,-2537,-2527
+StonePlantMound,-1996,-1991,-2522,-2517

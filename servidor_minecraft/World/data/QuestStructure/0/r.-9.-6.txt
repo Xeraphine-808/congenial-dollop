@@ -1,0 +1,7 @@
+StoneBoulder,-5112,-5103,-3398,-3389
+StonePlantMound3,-5096,-5085,-3309,-3300
+WoodWallRemains,-5039,-5011,-3407,-3399
+StoneLeafMound,-5038,-5029,-3482,-3475
+StonePlantBoulder,-5051,-5041,-3511,-3501
+RLCraft_DecentSpider,-4956,-4956,-3089,-3089
+RLCraft_UndergroundRuin2,-4958,-4951,-3094,-3084

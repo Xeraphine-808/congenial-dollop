@@ -1,0 +1,2 @@
+StonePlantMound1,-2006,-2000,-2567,-2561
+StonePlantBoulder,-2034,-2024,-2602,-2592

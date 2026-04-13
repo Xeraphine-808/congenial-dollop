@@ -1,0 +1,12 @@
+SmallWoodenCottage,-4631,-4623,-4701,-4690
+StonePlantMound1,-4667,-4661,-4687,-4681
+RLCraft_BasicSkeleton,-4642,-4642,-4745,-4745
+RLCraft_UndergroundRuin1,-4645,-4636,-4748,-4739
+StonePlantMound3,-4615,-4606,-4755,-4744
+StonePlantMound2,-4628,-4616,-4754,-4741
+StoneBoulder,-4643,-4634,-4786,-4777
+MysticalTree,-4672,-4657,-4864,-4848
+StoneBoulder,-4724,-4715,-4893,-4884
+Tree_Oak_TheMushroomOak_v3,-4661,-4611,-4953,-4894
+StonePlantMound4,-4621,-4614,-5007,-5000
+StonePlantBoulder,-4625,-4615,-5091,-5081

@@ -1,0 +1,6 @@
+RLCraft_DecentZombie,-4699,-4699,-995,-995
+RLCraft_UndergroundRuin3,-4701,-4693,-998,-990
+ShrineSmallFire,-4839,-4829,-821,-811
+P_TreeDungeon,-4801,-4756,-575,-533
+RLCraft_BasicSkeleton,-5086,-5086,-940,-940
+RLCraft_UndergroundRuin1,-5092,-5083,-943,-934

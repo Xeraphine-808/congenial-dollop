@@ -1,0 +1,5 @@
+RLCraft_SmallUndergroundSkeleton,-2559,-2551,4320,4328
+RLCraft_SmallUndergroundSkeleton,-2560,-2552,4348,4356
+StoneIceBoulder,-2460,-2450,4245,4254
+StoneIceBoulder1,-2482,-2472,4464,4474
+P_WizardTower,-2315,-2285,4437,4467

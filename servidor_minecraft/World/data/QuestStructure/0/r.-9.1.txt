@@ -1,0 +1,4 @@
+RLCraft_DecentCaveSpider,-4855,-4855,548,548
+RLCraft_UndergroundRuin3,-4860,-4852,542,550
+ShrineSmallFire,-4837,-4827,668,678
+PeacefulCrypt,-4820,-4804,704,728

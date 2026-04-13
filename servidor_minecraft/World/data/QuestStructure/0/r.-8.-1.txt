@@ -1,0 +1,7 @@
+StoneBoulder,-4371,-4362,-997,-988
+RLCraft_DecentSkeleton,-4571,-4571,-1017,-1017
+RLCraft_UndergroundRuin2,-4576,-4566,-1019,-1012
+ShrineSmallAir,-4552,-4544,-810,-802
+ShrineSmallFire,-4518,-4508,-740,-730
+RLCraft_DecentSkeleton,-4318,-4318,-597,-597
+RLCraft_UndergroundRuin2,-4323,-4313,-599,-592

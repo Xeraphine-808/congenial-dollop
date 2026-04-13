@@ -1,0 +1,17 @@
+StonePlantMound,-2486,-2481,-2120,-2115
+SmallWoodenCottage1,-2424,-2413,-2131,-2125
+RLCraft_BasicSkeleton,-2324,-2324,-2114,-2114
+RLCraft_UndergroundRuin1,-2330,-2321,-2120,-2111
+RLCraft_SmallUndergroundSkeleton,-2299,-2291,-2112,-2104
+StoneBoulder,-2351,-2342,-2136,-2127
+ShrineSmallFire,-2336,-2326,-2127,-2117
+StonePlantMound4,-2382,-2375,-2176,-2169
+RLCraft_SmallUndergroundSkeleton,-2271,-2263,-2260,-2252
+BrickHenge,-2409,-2393,-2212,-2196
+RLCraft_DecentSkeleton,-2394,-2394,-2258,-2258
+RLCraft_UndergroundRuin2,-2399,-2389,-2260,-2253
+StonePlantMound1,-2183,-2177,-2289,-2283
+StonePlantMound1,-2161,-2155,-2311,-2305
+RLCraft_SmallUndergroundSkeleton,-2097,-2089,-2331,-2323
+StoneLeafMound,-2095,-2088,-2445,-2436
+MeteorSite,-2175,-2160,-2552,-2522

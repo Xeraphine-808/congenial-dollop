@@ -1,0 +1,13 @@
+SmallOutpost,-2856,-2834,7617,7647
+P_VillageHouse,-2811,-2800,7591,7600
+P_Village2Story,-2794,-2781,7591,7597
+RLCraft_BasicSkeleton,-3016,-3016,7527,7527
+RLCraft_UndergroundRuin1,-3022,-3013,7521,7530
+IceThorn,-3027,-3001,7488,7503
+DinosaurSkull,-2927,-2916,7391,7410
+RLCraft_SmallUndergroundSkeleton,-2914,-2906,7343,7351
+P_WitchDungeon,-3009,-2992,7302,7336
+PeacefulCrypt,-2915,-2891,7259,7275
+ElvenPond,-2901,-2871,7222,7251
+UndergroundCrypt,-2831,-2803,7254,7268
+ShrineSmallAir,-2801,-2793,7273,7281

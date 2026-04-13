@@ -1,0 +1,10 @@
+PeacefulCrypt,-4360,-4336,-6337,-6321
+SmallWoodenCottage,-4368,-4360,-6434,-6423
+ShrineSmallAir,-4308,-4300,-6478,-6470
+RLCraft_DecentSkeleton,-4251,-4251,-6614,-6614
+RLCraft_UndergroundRuin2,-4253,-4246,-6619,-6609
+RLCraft_DecentSkeleton,-4213,-4213,-6593,-6593
+RLCraft_UndergroundRuin3,-4216,-4208,-6595,-6587
+RLCraft_DecentSpider,-4117,-4117,-6633,-6633
+RLCraft_UndergroundRuin2,-4122,-4115,-6638,-6628
+RLCraft_UndergroundFarm,-4216,-4174,-6539,-6496

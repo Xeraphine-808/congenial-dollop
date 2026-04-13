@@ -1,0 +1,12 @@
+WoodWallRemains,-3582,-3574,-1031,-1003
+RLCraft_BasicZombie,-3430,-3430,-978,-978
+RLCraft_UndergroundRuin1,-3433,-3424,-984,-975
+StonePlantMound3,-3395,-3384,-987,-978
+StonePlantMound3,-3515,-3506,-929,-918
+RLCraft_BasicSpider,-3550,-3550,-919,-919
+RLCraft_UndergroundRuin1,-3556,-3547,-922,-913
+StonePlantBoulder,-3407,-3397,-920,-910
+ClayWaterMound,-3388,-3380,-968,-961
+RLCraft_DecentSkeleton,-3409,-3409,-879,-879
+RLCraft_UndergroundRuin3,-3415,-3407,-884,-876
+StonePlantMound4,-3357,-3350,-926,-919

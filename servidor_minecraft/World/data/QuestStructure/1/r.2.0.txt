@@ -1,0 +1,3 @@
+RLCraft_End_Obsidian_Spike_2,1061,1074,-400,-385
+RLCraft_End_Ship_Split_Front,1048,1072,-432,-417
+RLCraft_End_Decoration_2,1040,1050,-456,-446

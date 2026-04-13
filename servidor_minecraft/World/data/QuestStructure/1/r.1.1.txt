@@ -1,0 +1,4 @@
+RLCraft_End_Meteor_Site,825,860,855,876
+RLCraft_End_Flipped_Castle,885,929,650,695
+RLCraft_End_Obsidian_Spike_3,906,932,736,752
+RLCraft_End_Decoration_1,987,997,593,603

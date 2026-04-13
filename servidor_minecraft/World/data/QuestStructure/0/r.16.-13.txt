@@ -1,0 +1,4 @@
+ClayWaterMound1,8594,8605,-6866,-6856
+StonePlantMound1,8599,8605,-6940,-6934
+StoneBoulder,8518,8527,-6903,-6894
+OldWatchtower,8530,8543,-6948,-6936

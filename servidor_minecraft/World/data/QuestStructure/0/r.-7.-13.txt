@@ -1,0 +1,2 @@
+ShrineSmallFire,-4086,-4076,-6679,-6669
+SmallWoodenCottage,-4055,-4047,-6800,-6789

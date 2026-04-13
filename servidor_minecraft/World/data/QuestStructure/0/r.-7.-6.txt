@@ -1,0 +1,7 @@
+StonePlantMound4,-3960,-3953,-3112,-3105
+SmallAbandonedMine,-3949,-3934,-3117,-3092
+StoneLeafMound,-3905,-3898,-3118,-3109
+StoneLeafMound,-4092,-4083,-3160,-3153
+StonePlantMound1,-4065,-4059,-3242,-3236
+RLCraft_DecentSkeleton,-4044,-4044,-3419,-3419
+RLCraft_UndergroundRuin2,-4049,-4042,-3424,-3414

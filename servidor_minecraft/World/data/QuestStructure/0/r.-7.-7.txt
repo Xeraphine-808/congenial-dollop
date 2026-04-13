@@ -1,0 +1,4 @@
+UndergroundCultChamber,-3686,-3654,-3936,-3894
+UndergroundCultChamber,-3767,-3735,-4016,-3974
+RLCraft_DecentWitch,-3973,-3973,-3589,-3589
+RLCraft_UndergroundRuin2,-3978,-3968,-3594,-3587

@@ -1,0 +1,5 @@
+PeacefulCrypt,-2972,-2956,-2081,-2057
+RLCraft_Airtes,-2918,-2903,-2097,-2082
+StoneBoulder,-2713,-2704,-2122,-2113
+P_TreeDungeon,-2921,-2879,-2159,-2114
+DinosaurSkeleton,-2691,-2645,-2069,-2060

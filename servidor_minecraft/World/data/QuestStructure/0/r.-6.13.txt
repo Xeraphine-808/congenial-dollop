@@ -1,0 +1,13 @@
+RLCraft_DecentZombie,-3080,-3080,7154,7154
+RLCraft_UndergroundRuin2,-3085,-3075,7152,7159
+RLCraft_SmallUndergroundSkeleton,-3141,-3133,7143,7151
+StoneBoulder,-3157,-3148,7136,7145
+StonePlantMound1,-3226,-3220,7104,7110
+ClayWaterMound,-3176,-3169,7088,7096
+StoneBoulder,-3120,-3111,7058,7067
+StoneMazeEndChest,-3073,-3071,7022,7024
+StoneMazeEndChest,-3073,-3071,7034,7036
+StonePlantMound1,-3096,-3090,7028,7034
+Tree_Oak_TheMushroomOak_v3,-3292,-3242,7003,7062
+RLCraft_DecentCaveSpider,-3302,-3302,7099,7099
+RLCraft_UndergroundRuin2,-3307,-3300,7094,7104

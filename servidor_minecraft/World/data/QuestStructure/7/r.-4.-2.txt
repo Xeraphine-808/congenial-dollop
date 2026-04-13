@@ -1,0 +1,12 @@
+StonePlantMound2,-2562,-2549,-1528,-1516
+MysticalTree2,-2554,-2544,-1456,-1446
+StonePlantMound,-2526,-2521,-1483,-1478
+StonePlantBoulder,-2508,-2498,-1513,-1503
+StoneBoulder,-2467,-2458,-1428,-1419
+StoneIceBoulder2,-2444,-2435,-1508,-1499
+RLCraft_DecentCaveSpider,-2413,-2413,-1525,-1525
+RLCraft_UndergroundRuin2,-2418,-2408,-1527,-1520
+SmallOutpost,-2419,-2389,-1480,-1458
+RLCraft_UndergroundFarm,-2377,-2334,-1463,-1421
+StoneIceBoulder3,-2345,-2335,-1380,-1370
+StoneIceBoulder1,-2289,-2279,-1496,-1486

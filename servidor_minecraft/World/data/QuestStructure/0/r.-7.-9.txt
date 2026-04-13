@@ -1,0 +1,7 @@
+StonePlantMound4,-3929,-3922,-4635,-4628
+StonePlantMound2,-3942,-3930,-4679,-4666
+StonePlantMound,-3813,-3808,-4661,-4656
+SmallWoodenCottage,-3759,-3751,-4659,-4648
+SmallAbandonedOutpost,-3899,-3877,-4742,-4712
+StonePlantMound1,-4024,-4018,-4705,-4699
+RLCraft_PlainsCamp,-4053,-4014,-4710,-4664

@@ -1,0 +1,15 @@
+RLCraft_BasicSpider,-5442,-5442,-4622,-4622
+RLCraft_UndergroundRuin1,-5445,-5436,-4625,-4616
+ShrineSmallFire,-5240,-5230,-4719,-4709
+UndergroundTreeoid,-5549,-5523,-4647,-4624
+RLCraft_BasicSkeleton,-5145,-5145,-4696,-4696
+RLCraft_UndergroundRuin1,-5151,-5142,-4702,-4693
+DinosaurSkeleton,-5144,-5135,-4655,-4609
+RLCraft_LargeUndergroundTown,-5210,-5073,-4672,-4559
+ShrineSmallAir,-5129,-5121,-4685,-4677
+RLCraft_DecentCaveSpider,-5144,-5144,-4776,-4776
+RLCraft_UndergroundRuin2,-5149,-5139,-4778,-4771
+RLCraft_BasicZombie,-5383,-5383,-4901,-4901
+RLCraft_UndergroundRuin1,-5389,-5380,-4907,-4898
+UndergroundTreeoid,-5328,-5302,-5028,-5005
+ShrineSmallFire,-5635,-5625,-4627,-4617

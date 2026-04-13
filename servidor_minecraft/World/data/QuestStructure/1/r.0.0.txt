@@ -1,0 +1,4 @@
+RLCraft_End_Decoration_1,-37,-27,6,16
+RLCraft_End_Decoration_2,46,56,47,57
+RLCraft_End_Floating_Tower,116,134,-78,-60
+RLCraft_End_Decoration_2,20,30,-153,-143

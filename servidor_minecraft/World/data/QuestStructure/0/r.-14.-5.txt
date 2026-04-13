@@ -1,0 +1,16 @@
+RLCraft_SmallUndergroundSkeleton,-7321,-7313,-3067,-3059
+StoneIceBoulder1,-7418,-7408,-2968,-2958
+StoneIceBoulder3,-7418,-7408,-2895,-2885
+RLCraft_SmallUndergroundSkeleton,-7613,-7605,-2919,-2911
+StoneIceBoulder,-7645,-7636,-3034,-3024
+ShrineSmallFire,-7658,-7648,-2798,-2788
+RLCraft_FriendlyOutpost,-7650,-7611,-2807,-2739
+PeacefulCrypt,-7601,-7577,-2803,-2787
+StoneIceBoulder3,-7614,-7604,-2710,-2700
+IceThorn,-7593,-7578,-2712,-2686
+StoneIceBoulder,-7666,-7657,-2712,-2702
+RLCraft_UndergroundFarm,-7686,-7644,-2726,-2683
+ShrineSmallAir,-7517,-7509,-2684,-2676
+RLCraft_SmallTown,-7358,-7287,-2838,-2763
+StoneIceBoulder1,-7185,-7175,-2647,-2637
+StoneIceBoulder2,-7173,-7164,-2750,-2741

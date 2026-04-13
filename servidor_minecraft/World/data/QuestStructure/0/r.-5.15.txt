@@ -1,0 +1,8 @@
+DinosaurSkull,-2943,-2932,7773,7792
+RLCraft_BasicSkeleton,-2963,-2963,7795,7795
+RLCraft_UndergroundRuin1,-2969,-2960,7792,7801
+SmallWoodenCottage,-2812,-2801,7798,7806
+RLCraft_BasicSkeleton,-2825,-2825,7836,7836
+RLCraft_UndergroundRuin1,-2831,-2822,7830,7839
+DinosaurSkull,-3054,-3035,7877,7888
+MeteorSite,-2986,-2956,7903,7918

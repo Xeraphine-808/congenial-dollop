@@ -1,0 +1,8 @@
+StoneIceBoulder2,-3236,-3227,4101,4110
+IceThorn2,-3276,-3266,4328,4340
+DinosaurSkeleton,-3377,-3331,4288,4297
+RLCraft_BasicZombie,-3378,-3378,4248,4248
+RLCraft_UndergroundRuin1,-3384,-3375,4242,4251
+StoneIceBoulder,-3404,-3394,4276,4285
+P_Tent,-3402,-3393,4291,4300
+DinosaurSkull,-3084,-3073,4517,4536

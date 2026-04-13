@@ -1,0 +1,6 @@
+RLCraft_BasicZombie,-3159,-3159,-4141,-4141
+RLCraft_UndergroundRuin1,-3162,-3153,-4144,-4135
+StoneLeafMound,-3387,-3378,-4211,-4204
+StoneLeafMound,-3295,-3288,-4232,-4223
+UndergroundTreeoid,-3106,-3080,-4205,-4182
+StonePlantMound1,-3321,-3315,-4108,-4102

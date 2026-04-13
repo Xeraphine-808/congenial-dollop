@@ -1,0 +1,6 @@
+ShrineSmallWater,-5253,-5245,-1172,-1164
+Tree_Oak_TheMushroomOak_v3,-5333,-5274,-1131,-1081
+ShrineSmallWater,-5285,-5277,-1418,-1410
+StonePlantMound,-5376,-5371,-1075,-1070
+RLCraft_DecentZombie,-5541,-5541,-1127,-1127
+RLCraft_UndergroundRuin2,-5546,-5536,-1129,-1122

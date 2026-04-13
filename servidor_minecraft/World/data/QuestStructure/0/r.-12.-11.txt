@@ -1,0 +1,15 @@
+DinosaurSkeleton,-6149,-6140,-5688,-5642
+DinosaurSkeleton,-6353,-6307,-5681,-5672
+MeteorSite,-6228,-6198,-5732,-5717
+RLCraft_DecentWitch,-6163,-6163,-5740,-5740
+RLCraft_UndergroundRuin3,-6165,-6157,-5745,-5737
+RLCraft_DecentCaveSpider,-6372,-6372,-5750,-5750
+RLCraft_UndergroundRuin3,-6374,-6366,-5755,-5747
+RLCraft_DecentCaveSpider,-6368,-6368,-5704,-5704
+RLCraft_UndergroundRuin2,-6373,-6366,-5709,-5699
+StonePlantMound,-6293,-6288,-5862,-5857
+StonePlantBoulder,-6312,-6302,-5867,-5857
+StonePlantMound1,-6214,-6208,-5883,-5877
+P_LargeShip,-6290,-6272,-5955,-5895
+RLCraft_DecentWitch,-6284,-6284,-6043,-6043
+RLCraft_UndergroundRuin3,-6286,-6278,-6046,-6038

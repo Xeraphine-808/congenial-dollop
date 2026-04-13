@@ -1,0 +1,12 @@
+StonePlantMound,-5936,-5931,-2688,-2683
+SmallAbandonedOutpost,-5938,-5908,-2687,-2665
+RLCraft_AgentStarbuck_WaterBase,-5664,-5647,-2599,-2587
+StonePlantMound,-5663,-5658,-2868,-2863
+StonePlantMound4,-5734,-5727,-2890,-2883
+StonePlantBoulder,-5728,-5718,-2901,-2891
+StonePlantMound,-5715,-5710,-2929,-2924
+StonePlantMound,-5641,-5636,-2983,-2978
+WoodWallRemains,-5791,-5783,-2999,-2971
+StonePlantMound,-5711,-5706,-3059,-3054
+DinosaurSkull,-5778,-5759,-3059,-3048
+StonePlantMound2,-5663,-5650,-3072,-3060

@@ -1,0 +1,16 @@
+RLCraft_DecentWitch,-5892,-5892,-4603,-4603
+RLCraft_UndergroundRuin3,-5898,-5890,-4608,-4600
+StonePlantMound2,-6041,-6029,-4611,-4598
+StonePlantMound1,-6030,-6024,-4528,-4522
+RLCraft_DecentZombie,-6012,-6012,-4362,-4362
+RLCraft_UndergroundRuin2,-6017,-6010,-4367,-4357
+RLCraft_DecentSkeleton,-6044,-6044,-4417,-4417
+RLCraft_UndergroundRuin3,-6046,-6038,-4420,-4412
+ShrineSmallFire,-5846,-5836,-4159,-4149
+ShrineSmallFire,-5697,-5687,-4349,-4339
+StonePlantMound2,-6127,-6115,-4543,-4530
+RLCraft_BasicSpider,-6118,-6118,-4598,-4598
+RLCraft_UndergroundRuin1,-6124,-6115,-4604,-4595
+SeasonsGreenhouse,-6106,-6094,-4551,-4541
+P_VillageFarmhouse,-6103,-6091,-4570,-4558
+VillageHouseRich,-6088,-6073,-4570,-4551

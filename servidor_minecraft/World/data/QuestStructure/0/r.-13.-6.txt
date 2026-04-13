@@ -1,0 +1,10 @@
+RLCraft_DecentSkeleton,-6700,-6700,-3073,-3073
+RLCraft_UndergroundRuin3,-6702,-6694,-3076,-3068
+StoneIceBoulder,-6673,-6664,-3135,-3125
+StoneIceBoulder3,-6757,-6747,-3118,-3108
+RLCraft_DecentCaveSpider,-6751,-6751,-3097,-3097
+RLCraft_UndergroundRuin3,-6754,-6746,-3099,-3091
+StoneIceBoulder,-6786,-6777,-3124,-3114
+StoneIceBoulder,-6859,-6849,-3118,-3109
+ShrineSmallFire,-6885,-6875,-3137,-3127
+SmallWoodenCottage,-6926,-6918,-3124,-3113

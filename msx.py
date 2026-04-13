@@ -2,6 +2,7 @@ import os
 import sys
 import time
 import signal
+import select
 import threading
 import subprocess
 import glob
@@ -33,37 +34,24 @@ log = logging.getLogger(__name__)
 # ─────────────────────────────────────────────
 #  COLORES ANSI
 # ─────────────────────────────────────────────
-C  = "\033[36m"   # cyan
-G  = "\033[32m"   # verde
-Y  = "\033[33m"   # amarillo
-R  = "\033[31m"   # rojo
-B  = "\033[1m"    # bold
-RS = "\033[0m"    # reset
+C  = "\033[36m"
+G  = "\033[32m"
+Y  = "\033[33m"
+R  = "\033[31m"
+B  = "\033[1m"
+RS = "\033[0m"
 
-def clr():
-    os.system("clear")
-
-def info(msg):
-    print(f"  {C}>{RS} {msg}", flush=True)
-    log.info(msg)
-
-def ok(msg):
-    print(f"  {G}✔{RS}  {msg}", flush=True)
-    log.info(msg)
-
-def warn(msg):
-    print(f"  {Y}⚠{RS}  {msg}", flush=True)
-    log.warning(msg)
-
-def err(msg):
-    print(f"  {R}✖{RS}  {msg}", flush=True)
-    log.error(msg)
+def clr():    os.system("clear")
+def info(m):  print(f"  {C}>{RS} {m}", flush=True);  log.info(m)
+def ok(m):    print(f"  {G}✔{RS}  {m}", flush=True); log.info(m)
+def warn(m):  print(f"  {Y}⚠{RS}  {m}", flush=True); log.warning(m)
+def err(m):   print(f"  {R}✖{RS}  {m}", flush=True); log.error(m)
 
 # ─────────────────────────────────────────────
 #  ESTADO GLOBAL
 # ─────────────────────────────────────────────
 proceso_mc: subprocess.Popen | None = None
-_apagando = False
+_servidor_corriendo = False
 
 # ─────────────────────────────────────────────
 #  GIT
@@ -79,10 +67,8 @@ def setup_git():
     _git("config", "--global", "user.name",  "Codespace Backup")
 
 def crear_gitignore():
-    ignorar = [
-        "# mc_manager", "*.log", "logs/", "crash-reports/",
-        "*.tmp", "*.lock", "__pycache__/", "playit.log", "manager.log",
-    ]
+    ignorar = ["# mc_manager", "*.log", "logs/", "crash-reports/",
+               "*.tmp", "*.lock", "__pycache__/", "playit.log", "manager.log"]
     ruta = Path(".gitignore")
     actual = ruta.read_text(encoding="utf-8") if ruta.exists() else ""
     nuevas = [l for l in ignorar if l not in actual]
@@ -95,28 +81,25 @@ def git_push_retry() -> bool:
         res = _git("push", "origin", GIT_BRANCH, capturar=True)
         if res.returncode == 0:
             return True
-        warn(f"Push falló (intento {i}/{MAX_REINTENTOS_PUSH})")
+        warn(f"Push falló (intento {i}/{MAX_REINTENTOS_PUSH}): {res.stderr.strip()}")
         if i < MAX_REINTENTOS_PUSH:
             time.sleep(8)
     return False
 
-def hacer_backup(etiqueta="acutalizado") -> bool:
+def hacer_backup(etiqueta="manual"):
     raiz = Path(__file__).parent.resolve()
     os.chdir(raiz)
     _git("add", ".")
     fecha = time.strftime("%Y-%m-%d %H:%M:%S")
-    res = _git("commit", "-m", f"[🌙] Respaldo {etiqueta}: {fecha}", capturar=True)
+    res = _git("commit", "-m", f"Backup {etiqueta}: {fecha}", capturar=True)
     if res.returncode == 0:
-        info(f"Commit creado. Subiendo a GitHub...")
+        info("Commit creado. Subiendo a GitHub...")
         if git_push_retry():
             ok("Backup subido correctamente.")
-            return True
         else:
-            err("No se pudo hacer push después de varios intentos.")
-            return False
+            err("No se pudo hacer push.")
     else:
         info("Sin cambios nuevos — no se creó commit.")
-        return True
 
 # ─────────────────────────────────────────────
 #  PLAYIT
@@ -124,85 +107,90 @@ def hacer_backup(etiqueta="acutalizado") -> bool:
 def run_playit():
     if not shutil.which("playit"):
         warn("'playit' no encontrado en PATH — sin tunnel.")
-        return
-    info("Iniciando Playit en segundo plano...")
+        return False
+    # Matar instancia previa si existe
+    subprocess.run(["pkill", "-f", "playit"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    time.sleep(1)
     with open("playit.log", "w") as lf:
-        subprocess.Popen(["playit"], stdout=lf, stderr=lf)
-    ok("Playit corriendo → playit.log")
+        subprocess.Popen(["playit"], stdout=lf, stderr=lf,
+                         start_new_session=True)
+    ok("Playit iniciado → playit.log")
+    return True
 
 # ─────────────────────────────────────────────
-#  BACKUP PERIÓDICO (hilo)
+#  BACKUP PERIÓDICO
 # ─────────────────────────────────────────────
+_stop_backup = threading.Event()
+
 def backup_loop():
-    while not _apagando:
-        time.sleep(INTERVALO_BACKUP)
-        if _apagando:
-            break
-        log.info("Backup periódico automático...")
+    while not _stop_backup.wait(timeout=INTERVALO_BACKUP):
+        log.info("Backup periódico...")
         hacer_backup("automático")
+        # Regresar a la carpeta del servidor si sigue corriendo
+        srv = Path(__file__).parent.resolve() / CARPETA_SERVER
+        if srv.exists() and _servidor_corriendo:
+            os.chdir(srv)
 
 # ─────────────────────────────────────────────
-#  SEÑAL Ctrl+C  →  solo detiene el servidor
+#  SERVIDOR
 # ─────────────────────────────────────────────
-def _handler_shutdown(sig, frame):
-    global _apagando
-    # Si el servidor está corriendo, Ctrl+C lo detiene limpiamente
+def detener_servidor():
+    """Envía 'stop' al servidor y espera que cierre."""
+    global proceso_mc
     if proceso_mc and proceso_mc.poll() is None:
-        _apagando = True
-        print(f"\n  {Y}[Ctrl+C]{RS} Deteniendo servidor...", flush=True)
         try:
             proceso_mc.stdin.write("stop\n")
             proceso_mc.stdin.flush()
             proceso_mc.wait(timeout=60)
         except Exception:
             proceso_mc.terminate()
-    # No llamar sys.exit — dejar que main_loop() retome el menú
+            proceso_mc.wait()
 
-signal.signal(signal.SIGINT,  _handler_shutdown)
-signal.signal(signal.SIGTERM, _handler_shutdown)
+# Ctrl+C mientras el servidor corre → solo detiene el servidor
+def _ctrlc_servidor(sig, frame):
+    print(f"\n  {Y}[Ctrl+C detectado]{RS} Deteniendo servidor...", flush=True)
+    detener_servidor()
 
-# ─────────────────────────────────────────────
-#  SERVIDOR
-# ─────────────────────────────────────────────
 def iniciar_servidor():
-    global proceso_mc, _apagando
+    global proceso_mc, _servidor_corriendo
 
     if not Path(JAVA_8).exists():
-        err(f"Java 8 no encontrado en: {JAVA_8}")
-        err("Instálalo con: sudo apt-get install -y openjdk-8-jdk")
-        input(f"\n  {Y}Presiona Enter para volver al menú...{RS}")
+        err(f"Java 8 no encontrado: {JAVA_8}")
+        err("Instálalo: sudo apt-get install -y openjdk-8-jdk")
+        input(f"\n  {Y}Enter para volver al menú...{RS}")
         return
 
     srv = Path(CARPETA_SERVER)
     if not srv.exists():
-        err(f"No existe la carpeta '{CARPETA_SERVER}'")
-        input(f"\n  {Y}Presiona Enter para volver al menú...{RS}")
+        err(f"Carpeta '{CARPETA_SERVER}' no existe.")
+        input(f"\n  {Y}Enter para volver al menú...{RS}")
         return
 
     os.chdir(srv)
     jars = glob.glob("forge*.jar")
     if not jars:
-        err("No se encontró ningún 'forge*.jar'")
+        err("No se encontró 'forge*.jar'")
         os.chdir("..")
-        input(f"\n  {Y}Presiona Enter para volver al menú...{RS}")
+        input(f"\n  {Y}Enter para volver al menú...{RS}")
         return
 
     jar_file = jars[0]
-
-    # Playit
     run_playit()
 
-    # Hilo de backup periódico
-    _apagando = False
+    # Iniciar hilo de backup periódico
+    _stop_backup.clear()
     hilo_backup = threading.Thread(target=backup_loop, daemon=True, name="backup")
     hilo_backup.start()
 
-    # Limpiar pantalla antes de mostrar la consola de Minecraft
+    _servidor_corriendo = True
+
+    # Registrar Ctrl+C para esta sesión
+    signal.signal(signal.SIGINT, _ctrlc_servidor)
+
     clr()
-    print(f"{B}{'─'*60}{RS}")
-    print(f"  {G}{B}SERVIDOR MINECRAFT{RS}  {C}{jar_file}{RS}")
-    print(f"  Escribe comandos aquí · Ctrl+C para detener")
-    print(f"{B}{'─'*60}{RS}\n")
+    print(f"\n  {B}{G}SERVIDOR MINECRAFT{RS}  {C}{jar_file}{RS}")
+    print(f"  {Y}Ctrl+C{RS} para detener el servidor\n")
+    print("─" * 50, flush=True)
 
     comando = [
         JAVA_8,
@@ -215,37 +203,56 @@ def iniciar_servidor():
         comando,
         stdin=subprocess.PIPE,
         stdout=sys.stdout,
-        stderr=sys.stdout,   # stderr también a stdout para no mezclar streams
+        stderr=sys.stdout,
         text=True,
         bufsize=1,
     )
 
-    # Relay stdin usuario → servidor
+    # Relay stdin → servidor usando select para no bloquear señales
     def relay_stdin():
-        try:
-            for linea in sys.stdin:
-                if proceso_mc.poll() is not None:
-                    break
-                proceso_mc.stdin.write(linea)
-                proceso_mc.stdin.flush()
-        except (EOFError, OSError):
-            pass
+        fd = sys.stdin.fileno()
+        while proceso_mc.poll() is None:
+            try:
+                r, _, _ = select.select([fd], [], [], 0.2)
+                if r:
+                    linea = sys.stdin.readline()
+                    if not linea:
+                        break
+                    proceso_mc.stdin.write(linea)
+                    proceso_mc.stdin.flush()
+            except (OSError, ValueError):
+                break
 
     hilo_stdin = threading.Thread(target=relay_stdin, daemon=True, name="stdin-relay")
     hilo_stdin.start()
 
     proceso_mc.wait()
 
-    # Servidor cerrado → backup final
-    _apagando = True
+    # Servidor cerrado
+    _servidor_corriendo = False
+    _stop_backup.set()
+
     raiz = Path(__file__).parent.resolve()
     os.chdir(raiz)
 
-    print(f"\n{B}{'─'*60}{RS}")
-    print(f"  {Y}Servidor detenido.{RS} Realizando backup final...")
+    print("\n" + "─" * 50)
+    print(f"\n  {Y}Servidor detenido.{RS} Realizando backup final...\n")
     hacer_backup("FINAL")
 
-    input(f"\n  {G}Presiona Enter para volver al menú...{RS}")
+    # Restaurar Ctrl+C al comportamiento del menú
+    signal.signal(signal.SIGINT, _ctrlc_menu)
+
+    input(f"\n  {G}Enter para volver al menú...{RS}")
+
+# ─────────────────────────────────────────────
+#  Ctrl+C en el menú → salir limpio
+# ─────────────────────────────────────────────
+def _ctrlc_menu(sig, frame):
+    clr()
+    print(f"\n  {G}👋  ¡Hasta luego!{RS}\n")
+    sys.exit(0)
+
+signal.signal(signal.SIGINT, _ctrlc_menu)
 
 # ─────────────────────────────────────────────
 #  MENÚ
@@ -257,7 +264,7 @@ def dibujar_menu():
     print(f"  {B}{C}║   🎮  MC Server Manager          ║{RS}")
     print(f"  {B}{C}╚══════════════════════════════════╝{RS}")
     print()
-    print(f"  {B}[1]{RS}  Iniciar servidor")
+    print(f"  {B}[1]{RS}  Iniciar servidor  {C}(+ Playit){RS}")
     print(f"  {B}[2]{RS}  Hacer backup ahora")
     print(f"  {B}[0]{RS}  Salir")
     print()
@@ -266,17 +273,16 @@ def menu_backup():
     clr()
     print(f"\n  {B}── Backup manual ──{RS}\n")
     hacer_backup("manual")
-    input(f"\n  {G}Presiona Enter para volver al menú...{RS}")
+    input(f"\n  {G}Enter para volver al menú...{RS}")
 
 def main_loop():
-    # Configuración inicial silenciosa
     setup_git()
     crear_gitignore()
 
     while True:
         dibujar_menu()
         try:
-            opcion = input(f"  Elige una opción: ").strip()
+            opcion = input(f"  Opción: ").strip()
         except (EOFError, KeyboardInterrupt):
             opcion = "0"
 
@@ -288,8 +294,6 @@ def main_loop():
             clr()
             print(f"\n  {G}👋  ¡Hasta luego!{RS}\n")
             sys.exit(0)
-        else:
-            pass   # opción inválida → redibujar menú
 
 if __name__ == "__main__":
     main_loop()

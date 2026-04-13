@@ -1,0 +1,3 @@
+StonePlantBoulder,-6508,-6498,-5167,-5157
+ShrineSmallFire,-6293,-6283,-5214,-5204
+RLCraft_DesertTown,-6254,-6188,-5255,-5189

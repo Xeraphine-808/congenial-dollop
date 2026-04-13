@@ -1,0 +1,3 @@
+RLCraft_BasicCaveSpider,-2617,-2617,-2949,-2949
+RLCraft_UndergroundRuin1,-2620,-2611,-2955,-2946
+MonolythHoly,-2675,-2661,-3055,-3041

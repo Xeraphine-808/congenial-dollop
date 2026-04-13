@@ -1,0 +1,6 @@
+RLCraft_Lyquix,4233,4249,1022,1038
+P_VillageFarmhouse,4171,4183,1047,1059
+VillageGuardTower,4215,4227,1061,1073
+VillageMarketplace,4162,4176,1074,1088
+ThreeTowers,4180,4211,1089,1121
+SeasonsGreenhouse,4171,4183,1062,1072

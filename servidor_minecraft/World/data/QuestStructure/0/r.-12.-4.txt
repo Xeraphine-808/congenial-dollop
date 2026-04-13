@@ -1,0 +1,7 @@
+RLCraft_UndergroundFarm,-6408,-6365,-2579,-2537
+RLCraft_DecentSpider,-6508,-6508,-2418,-2418
+RLCraft_UndergroundRuin2,-6513,-6503,-2423,-2416
+StoneIceBoulder2,-6581,-6572,-2525,-2516
+P_Deqing,-6628,-6576,-2539,-2492
+RLCraft_DecentZombie,-6279,-6279,-2362,-2362
+RLCraft_UndergroundRuin3,-6284,-6276,-2368,-2360

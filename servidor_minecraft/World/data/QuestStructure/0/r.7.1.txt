@@ -1,0 +1,3 @@
+UnnaturalCrater,4004,4044,614,654
+MeteorSite,3888,3903,850,880
+DinosaurSkull,4078,4097,658,669

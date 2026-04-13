@@ -1,0 +1,11 @@
+RLCraft_DecentWitch,-8123,-8123,-2202,-2202
+RLCraft_UndergroundRuin2,-8128,-8118,-2204,-2197
+ShrineSmallFire,-8098,-8088,-2257,-2247
+RLCraft_FriendlyOutpost,-8057,-7989,-2190,-2151
+StoneIceBoulder1,-8027,-8017,-2063,-2053
+IceThorn3,-8014,-8000,-2142,-2128
+SmallWoodenCottage1,-7999,-7993,-2087,-2076
+RLCraft_4Towers,-7989,-7937,-2363,-2303
+StoneIceBoulder3,-7940,-7930,-2059,-2049
+StoneIceBoulder2,-7916,-7907,-2236,-2227
+RLCraft_SmallUndergroundSkeleton,-7838,-7830,-2178,-2170

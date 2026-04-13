@@ -1,0 +1,15 @@
+SmallAbandonedMine,-2665,-2640,-3158,-3143
+RLCraft_BasicWitch,-2567,-2567,-3165,-3165
+RLCraft_UndergroundRuin1,-2573,-2564,-3171,-3162
+RLCraft_DecentZombie,-2691,-2691,-3163,-3163
+RLCraft_UndergroundRuin2,-2696,-2686,-3168,-3161
+StonePlantMound3,-2787,-2778,-3274,-3263
+FallenPalmTree,-2852,-2842,-3113,-3109
+StoneLeafMound,-2789,-2782,-3393,-3384
+StonePlantMound2,-2766,-2753,-3420,-3408
+StonePlantBoulder,-2742,-2732,-3436,-3426
+RLCraft_DecentCaveSpider,-2783,-2783,-3438,-3438
+RLCraft_UndergroundRuin3,-2789,-2781,-3443,-3435
+StonePlantMound4,-2728,-2721,-3562,-3555
+StonePlantMound,-2663,-2658,-3578,-3573
+WoodWallRemains,-2690,-2662,-3500,-3492

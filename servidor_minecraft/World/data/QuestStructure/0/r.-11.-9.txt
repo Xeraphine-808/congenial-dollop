@@ -1,0 +1,9 @@
+RLCraft_Lyquix,-5644,-5628,-4987,-4971
+P_WitchDungeon,-6078,-6061,-4896,-4862
+RLCraft_DecentCaveSpider,-5792,-5792,-4651,-4651
+RLCraft_UndergroundRuin2,-5794,-5787,-4656,-4646
+ShrineSmallFire,-5845,-5835,-4633,-4623
+WoodWallRemains,-5975,-5967,-4668,-4640
+StonePlantMound,-6016,-6011,-4660,-4655
+StonePlantMound,-6057,-6052,-4646,-4641
+StonePlantMound1,-6119,-6113,-4636,-4630

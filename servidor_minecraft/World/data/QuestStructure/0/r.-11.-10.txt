@@ -1,0 +1,12 @@
+RLCraft_SmallUndergroundSkeleton,-5844,-5836,-5157,-5149
+RLCraft_DecentCaveSpider,-5804,-5804,-5266,-5266
+RLCraft_UndergroundRuin2,-5809,-5799,-5271,-5264
+JokerTower,-6020,-6012,-5295,-5287
+ShrineSmallFire,-6052,-6042,-5142,-5132
+RLCraft_DecentSpider,-5852,-5852,-5348,-5348
+RLCraft_UndergroundRuin2,-5857,-5847,-5353,-5346
+FallenPalmTree,-6122,-6112,-5233,-5229
+RLCraft_DecentSkeleton,-6007,-6007,-5423,-5423
+RLCraft_UndergroundRuin2,-6012,-6005,-5428,-5418
+BigClockworkSite,-6152,-6107,-5458,-5423
+SmallAbandonedMine,-6047,-6022,-5531,-5516

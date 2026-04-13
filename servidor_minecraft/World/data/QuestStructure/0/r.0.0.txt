@@ -1,0 +1,9 @@
+P_Crater,-244,-168,300,383
+StonePlantMound4,-173,-166,429,436
+RLCraft_BasicZombie,161,161,175,175
+RLCraft_UndergroundRuin1,158,167,172,181
+StoneIceBoulder3,146,156,239,249
+StoneIceBoulder2,233,242,13,22
+StoneIceBoulder1,154,164,65,75
+RLCraft_DecentSpider,-504,-504,213,213
+RLCraft_UndergroundRuin2,-506,-499,208,218
