@@ -100,12 +100,12 @@ def git_push_retry() -> bool:
             time.sleep(8)
     return False
 
-def hacer_backup(etiqueta="manual") -> bool:
+def hacer_backup(etiqueta="acutalizado") -> bool:
     raiz = Path(__file__).parent.resolve()
     os.chdir(raiz)
     _git("add", ".")
     fecha = time.strftime("%Y-%m-%d %H:%M:%S")
-    res = _git("commit", "-m", f"Backup {etiqueta}: {fecha}", capturar=True)
+    res = _git("commit", "-m", f"[🌙] Respaldo {etiqueta}: {fecha}", capturar=True)
     if res.returncode == 0:
         info(f"Commit creado. Subiendo a GitHub...")
         if git_push_retry():
