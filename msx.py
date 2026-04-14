@@ -9,95 +9,124 @@ import shutil
 from pathlib import Path
 
 # ─────────────────────────────────────────────
-#  CONFIGURACIÓN
+#  CONFIGURACIÓN (Ajusta esto)
 # ─────────────────────────────────────────────
-INTERVALO_BACKUP    = 1800  # 30 minutos
-GIT_BRANCH          = "main"
+JAR_NAME          = "server.jar"  # Nombre de tu archivo .jar
+RAM_INICIAL       = "2G"
+RAM_MAXIMA        = "4G"
+INTERVALO_BACKUP  = 1800          # 30 minutos
+GIT_BRANCH        = "main"
 MAX_REINTENTOS_PUSH = 3
 
 # ─────────────────────────────────────────────
-#  LOGGING
+#  LOGGING Y ESTILOS
 # ─────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s  %(message)s",
+    format="%(asctime)s %(message)s",
     datefmt="%H:%M:%S",
     handlers=[logging.FileHandler("manager.log", encoding="utf-8")],
 )
 log = logging.getLogger(__name__)
 
-# ─────────────────────────────────────────────
-#  COLORES ANSI
-# ─────────────────────────────────────────────
-C  = "\033[36m"
-G  = "\033[32m"
-Y  = "\033[33m"
-R  = "\033[31m"
-B  = "\033[1m"
-RS = "\033[0m"
+C, G, Y, R, B, RS = "\033[36m", "\033[32m", "\033[33m", "\033[31m", "\033[1m", "\033[0m"
 
-def clr():    os.system("clear")
-def info(m):  print(f"  {C}>{RS} {m}", flush=True);  log.info(m)
-def ok(m):    print(f"  {G}✔{RS}  {m}", flush=True); log.info(m)
-def warn(m):  print(f"  {Y}⚠{RS}  {m}", flush=True); log.warning(m)
-def err(m):   print(f"  {R}✖{RS}  {m}", flush=True); log.error(m)
+def info(m):  print(f"  {C}>{RS} {m}"); log.info(m)
+def ok(m):    print(f"  {G}✔{RS}  {m}"); log.info(m)
+def warn(m):  print(f"  {Y}⚠{RS}  {m}"); log.warning(m)
+def err(m):   print(f"  {R}✖{RS}  {m}"); log.error(m)
+
+# ─────────────────────────────────────────────
+#  CONTROL DE PROCESOS
+# ─────────────────────────────────────────────
+procesos = {"minecraft": None, "playit": None}
+
+def esta_corriendo(nombre):
+    proc = procesos.get(nombre)
+    return proc is not None and proc.poll() is None
 
 # ─────────────────────────────────────────────
 #  GIT & BACKUPS
 # ─────────────────────────────────────────────
-def _git(*args, capturar=False):
-    kwargs = dict(capture_output=True, text=True) if capturar else dict(
-        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
-    )
-    return subprocess.run(["git", *args], **kwargs)
+def _git(*args):
+    return subprocess.run(["git", *args], capture_output=True, text=True)
 
 def setup_git():
-    _git("config", "--global", "user.email", "codespace@example.com")
-    _git("config", "--global", "user.name",  "Codespace Backup")
-
-def git_push_retry() -> bool:
-    for i in range(1, MAX_REINTENTOS_PUSH + 1):
-        res = _git("push", "origin", GIT_BRANCH, capturar=True)
-        if res.returncode == 0:
-            return True
-        warn(f"Push falló (intento {i}/{MAX_REINTENTOS_PUSH})")
-        if i < MAX_REINTENTOS_PUSH:
-            time.sleep(5)
-    return False
+    _git("config", "--global", "user.email", "mc-manager@example.com")
+    _git("config", "--global", "user.name", "MC Server Manager")
 
 def hacer_backup(etiqueta="manual"):
+    if not os.path.exists(".git"):
+        err("No hay un repositorio Git inicializado aquí.")
+        return
+
     info(f"Iniciando backup ({etiqueta})...")
+    # Si el server está abierto, avisamos por log
+    if esta_corriendo("minecraft"):
+        warn("El servidor está activo. El backup podría capturar archivos temporales.")
+
     _git("add", ".")
     fecha = time.strftime("%Y-%m-%d %H:%M:%S")
-    res = _git("commit", "-m", f"Backup {etiqueta}: {fecha}", capturar=True)
-    if res.returncode == 0:
-        if git_push_retry():
-            ok(f"Backup '{etiqueta}' completado con éxito.")
-        else:
-            err("Error al subir el backup a GitHub.")
-    else:
+    res = _git("commit", "-m", f"Backup {etiqueta}: {fecha}")
+    
+    if "nothing to commit" in res.stdout:
         info("Nada nuevo para respaldar.")
+        return
+
+    for i in range(1, MAX_REINTENTOS_PUSH + 1):
+        res_push = _git("push", "origin", GIT_BRANCH)
+        if res_push.returncode == 0:
+            ok(f"Backup '{etiqueta}' subido a GitHub.")
+            return
+        warn(f"Reintento push {i}/{MAX_REINTENTOS_PUSH}...")
+        time.sleep(5)
+    err("No se pudo subir el backup tras varios intentos.")
 
 # ─────────────────────────────────────────────
-#  PLAYIT
+#  ACCIONES DE ARRANQUE
 # ─────────────────────────────────────────────
 def run_playit():
-    if not shutil.which("playit"):
-        err("'playit' no instalado. Instálalo primero.")
+    if esta_corriendo("playit"):
+        warn("Playit ya está en ejecución.")
         return
-    
-    # Matar procesos previos
-    subprocess.run(["pkill", "-f", "playit"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+    if not shutil.which("playit"):
+        err("Comando 'playit' no encontrado.")
+        return
+
+    try:
+        log_file = open("playit.log", "a")
+        procesos["playit"] = subprocess.Popen(
+            ["playit"], stdout=log_file, stderr=log_file, preexec_fn=os.setpgrp
+        )
+        ok("Playit iniciado en segundo plano (Log: playit.log).")
+    except Exception as e:
+        err(f"Error al iniciar Playit: {e}")
+
+def run_minecraft():
+    if esta_corriendo("minecraft"):
+        warn("El servidor de Minecraft ya está abierto.")
+        return
+
+    if not os.path.exists(JAR_NAME):
+        err(f"No se encuentra {JAR_NAME}")
+        return
+
+    cmd = ["java", f"-Xms{RAM_INICIAL}", f"-Xmx{RAM_MAXIMA}", "-jar", JAR_NAME, "nogui"]
     
     try:
-        with open("playit.log", "w") as lf:
-            subprocess.Popen(["playit"], stdout=lf, stderr=lf, start_new_session=True)
-        ok("Servicio Playit activado (Segundo plano).")
+        info("Iniciando Minecraft... (Usa Ctrl+C para volver al menú, el server seguirá vivo)")
+        # Iniciamos el proceso
+        procesos["minecraft"] = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+        # Esperamos un poco para ver si crashea al inicio
+        time.sleep(2)
+        if esta_corriendo("minecraft"):
+            ok("Servidor de Minecraft en línea.")
     except Exception as e:
-        err(f"No se pudo iniciar Playit: {e}")
+        err(f"Error al iniciar Minecraft: {e}")
 
 # ─────────────────────────────────────────────
-#  HILO DE BACKUP AUTOMÁTICO
+#  HILOS
 # ─────────────────────────────────────────────
 def backup_loop():
     while True:
@@ -105,47 +134,60 @@ def backup_loop():
         hacer_backup("automático")
 
 # ─────────────────────────────────────────────
-#  MENÚ PRINCIPAL
+#  INTERFAZ
 # ─────────────────────────────────────────────
-def dibujar_menu():
-    clr()
-    print()
-    print(f"  {B}{C}╔══════════════════════════════════╗{RS}")
-    print(f"  {B}{C}║    🛠️  Utility Manager MC        ║{RS}")
-    print(f"  {B}{C}╚══════════════════════════════════╝{RS}")
-    print()
-    print(f"  {B}[1]{RS}  Activar Playit")
-    print(f"  {B}[2]{RS}  Realizar Backup Manual")
-    print(f"  {B}[0]{RS}  Salir")
-    print()
-
-def _ctrlc_handler(sig, frame):
-    print(f"\n\n  {G}👋 Saliendo de forma segura...{RS}\n")
-    sys.exit(0)
+def menu():
+    os.system("clear")
+    print(f"""
+  {B}{C}╔════════════════════════════════════════╗{RS}
+  {B}{C}║      ⛏️  MINECRAFT SERVER MANAGER       ║{RS}
+  {B}{C}╚════════════════════════════════════════╝{RS}
+  
+  {B}[1]{RS} Iniciar Servidor Minecraft {f'({G}ONLINE{RS})' if esta_corriendo("minecraft") else f'({R}OFFLINE{RS})'}
+  {B}[2]{RS} Iniciar Playit Tunnel      {f'({G}ONLINE{RS})' if esta_corriendo("playit") else f'({R}OFFLINE{RS})'}
+  {B}[3]{RS} Realizar Backup Manual
+  {B}[4]{RS} Ver Logs de Minecraft (Escribir comandos)
+  
+  {B}[0]{RS} Salir y apagar todo
+    """)
 
 def main():
-    signal.signal(signal.SIGINT, _ctrlc_handler)
     setup_git()
-    
-    # Iniciar backup automático en segundo plano
-    hilo_auto = threading.Thread(target=backup_loop, daemon=True)
-    hilo_auto.start()
+    threading.Thread(target=backup_loop, daemon=True).start()
 
     while True:
-        dibujar_menu()
-        try:
-            opcion = input(f"  Opción: ").strip()
-        except (EOFError, KeyboardInterrupt):
-            _ctrlc_handler(None, None)
+        menu()
+        opcion = input(f"  {B}Selecciona una opción:{RS} ").strip()
 
         if opcion == "1":
-            run_playit()
-            input(f"\n  {Y}Presiona Enter para continuar...{RS}")
+            run_minecraft()
         elif opcion == "2":
+            run_playit()
+        elif opcion == "3":
             hacer_backup("manual")
-            input(f"\n  {Y}Presiona Enter para continuar...{RS}")
+        elif opcion == "4":
+            if esta_corriendo("minecraft"):
+                info("Entrando a la consola. Para salir al menú usa Ctrl+C.")
+                try:
+                    procesos["minecraft"].wait()
+                except KeyboardInterrupt:
+                    info("Regresando al menú... (El servidor sigue activo)")
+            else:
+                err("El servidor no está corriendo.")
         elif opcion == "0":
-            _ctrlc_handler(None, None)
+            confirmar = input(f"  {Y}¿Apagar servidor y salir? (s/n):{RS} ")
+            if confirmar.lower() == 's':
+                if esta_corriendo("minecraft"):
+                    info("Cerrando Minecraft de forma segura...")
+                    procesos["minecraft"].terminate()
+                if esta_corriendo("playit"):
+                    procesos["playit"].terminate()
+                sys.exit(0)
+        
+        time.sleep(1)
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(0)

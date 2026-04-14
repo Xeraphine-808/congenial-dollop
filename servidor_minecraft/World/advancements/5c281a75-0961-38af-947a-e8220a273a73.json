@@ -606,6 +606,12 @@
     },
     "done": true
   },
+  "defiledlands:recipes/decoration/tenebra_stairs_uncraft": {
+    "criteria": {
+      "has_material": "2026-04-13 22:07:52 +0000"
+    },
+    "done": true
+  },
   "minecraft:story/lava_bucket": {
     "criteria": {
       "lava_bucket": "2026-03-30 17:25:21 +0000"
@@ -639,6 +645,12 @@
   "minecraft:recipes/transportation/acacia_boat": {
     "criteria": {
       "entered_water": "2026-03-18 21:44:23 +0000"
+    },
+    "done": true
+  },
+  "defiledlands:recipes/decoration/wood_defiled_slab_tenebra_uncraft": {
+    "criteria": {
+      "has_material": "2026-04-13 22:07:52 +0000"
     },
     "done": true
   },
@@ -2096,6 +2108,12 @@
   "twilightforest:alt/treasures/maps": {
     "criteria": {
       "0": "2026-04-01 20:57:04 +0000"
+    },
+    "done": true
+  },
+  "defiledlands:recipes/decoration/wood_defiled_slab_tenebra": {
+    "criteria": {
+      "has_material": "2026-04-13 22:07:52 +0000"
     },
     "done": true
   },
