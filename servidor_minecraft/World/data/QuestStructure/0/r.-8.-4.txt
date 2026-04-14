@@ -201,3 +201,5 @@ WoodWallRemains,-4281,-4253,-2057,-2049
 StonePlantMound3,-4243,-4234,-2081,-2070
 StoneLeafMound,-4120,-4113,-2077,-2068
 StonePlantMound3,-4106,-4097,-2317,-2306
+StonePlantBoulder,-4430,-4420,-2129,-2119
+PeacefulCrypt,-4432,-4416,-2148,-2124

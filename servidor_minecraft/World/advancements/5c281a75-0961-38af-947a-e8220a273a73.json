@@ -1003,6 +1003,12 @@
     },
     "done": true
   },
+  "minecraft:nether/create_beacon": {
+    "criteria": {
+      "beacon": "2026-04-14 13:51:22 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/light_gray_dye_from_gray_bonemeal": {
     "criteria": {
       "has_bonemeal": "2026-03-27 21:38:10 +0000"
@@ -1938,6 +1944,12 @@
     },
     "done": true
   },
+  "minecraft:nether/create_full_beacon": {
+    "criteria": {
+      "beacon": "2026-04-14 13:54:27 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/transportation/spruce_boat": {
     "criteria": {
       "entered_water": "2026-03-18 21:44:23 +0000"
@@ -2012,6 +2024,7 @@
       "cooked_cod": "2026-04-13 16:23:20 +0000",
       "bread": "2026-03-18 22:49:09 +0000",
       "golden_apple": "2026-03-29 13:48:21 +0000",
+      "rotten_flesh": "2026-04-14 13:58:01 +0000",
       "beetroot": "2026-03-30 15:33:02 +0000",
       "golden_carrot": "2026-03-31 16:20:39 +0000",
       "cooked_chicken": "2026-03-30 13:29:55 +0000",
