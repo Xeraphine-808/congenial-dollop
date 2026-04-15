@@ -207,3 +207,5 @@ WoodWallRemains,-6457,-6449,-7033,-7005
 SmallWoodenCottage,-6292,-6281,-6946,-6938
 RLCraft_DecentWitch,-6370,-6370,-7096,-7096
 RLCraft_UndergroundRuin3,-6372,-6364,-7101,-7093
+StonePlantMound3,-6153,-6142,-6757,-6748
+DinosaurSkeleton,-6167,-6158,-7103,-7057

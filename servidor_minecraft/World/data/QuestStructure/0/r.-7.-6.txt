@@ -5,3 +5,8 @@ StoneLeafMound,-4092,-4083,-3160,-3153
 StonePlantMound1,-4065,-4059,-3242,-3236
 RLCraft_DecentSkeleton,-4044,-4044,-3419,-3419
 RLCraft_UndergroundRuin2,-4049,-4042,-3424,-3414
+StonePlantBoulder,-3840,-3830,-3122,-3112
+StonePlantMound4,-3840,-3833,-3150,-3143
+RLCraft_DecentCaveSpider,-3741,-3741,-3176,-3176
+RLCraft_UndergroundRuin2,-3746,-3736,-3178,-3171
+WoodenClockTower,-3625,-3593,-3109,-3069

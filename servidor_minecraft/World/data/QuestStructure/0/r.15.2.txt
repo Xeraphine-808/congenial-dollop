@@ -1,0 +1,2 @@
+StonePlantBoulder,8130,8140,1132,1142
+StoneLeafMound,8130,8137,1031,1040

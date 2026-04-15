@@ -1,0 +1,7 @@
+DesertBeacon,2155,2161,-8994,-8988
+DinosaurSkull,2177,2188,-9014,-8995
+DesertHut,2106,2116,-8926,-8917
+RLCraft_DecentSkeleton,2074,2074,-9007,-9007
+RLCraft_UndergroundRuin2,2069,2079,-9012,-9005
+DinosaurSkeleton,2251,2297,-8884,-8875
+FallenPalmTree,2292,2302,-8911,-8907

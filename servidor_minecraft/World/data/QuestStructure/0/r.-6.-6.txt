@@ -1,0 +1,16 @@
+ShrineSmallAir,-3144,-3136,-3117,-3109
+StonePlantBoulder,-3111,-3101,-3149,-3139
+StonePlantMound2,-3088,-3075,-3143,-3131
+StonePlantMound2,-3227,-3214,-3166,-3154
+StonePlantMound1,-3198,-3192,-3208,-3202
+StonePlantMound3,-3212,-3201,-3233,-3224
+StoneLeafMound,-3308,-3301,-3155,-3146
+StonePlantMound2,-3320,-3307,-3137,-3125
+RLCraft_SmallUndergroundSkeleton,-3333,-3325,-3114,-3106
+Tree_Oak_TheMushroomOak_v3,-3367,-3317,-3122,-3063
+StoneLeafMound,-3408,-3399,-3123,-3116
+StonePlantMound,-3434,-3429,-3128,-3123
+StoneBoulder,-3484,-3475,-3113,-3104
+StonePlantMound2,-3350,-3337,-3147,-3135
+StonePlantBoulder,-3102,-3092,-3256,-3246
+RLCraft_SmallUndergroundSkeleton,-3551,-3543,-3156,-3148

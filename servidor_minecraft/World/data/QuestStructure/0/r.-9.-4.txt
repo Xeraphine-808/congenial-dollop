@@ -221,3 +221,7 @@ P_SpookyHouse,-4985,-4959,-2566,-2526
 RLCraft_SmallUndergroundSkeleton,-4619,-4611,-2184,-2176
 StonePlantMound1,-4791,-4785,-2205,-2199
 StonePlantBoulder,-4819,-4809,-2328,-2318
+RLCraft_SmallUndergroundSkeleton,-4788,-4780,-2560,-2552
+StonePlantMound,-4673,-4668,-2434,-2429
+RLCraft_DecentSkeleton,-4633,-4633,-2538,-2538
+RLCraft_UndergroundRuin3,-4639,-4631,-2543,-2535

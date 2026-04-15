@@ -1,2 +1,11 @@
 ShrineSmallAir,-5703,-5695,-8210,-8202
 StonePlantMound,-5799,-5794,-8235,-8230
+RLCraft_UndergroundRuin1,-5637,-5628,-8550,-8541
+StonePlantMound1,-5739,-5733,-8551,-8545
+RLCraft_PlainsCamp,-5751,-5705,-8533,-8494
+DinosaurSkull,-5784,-5773,-8405,-8386
+RLCraft_UndergroundFarm,-5717,-5674,-8384,-8342
+RLCraft_DecentSkeleton,-5802,-5802,-8211,-8211
+RLCraft_UndergroundRuin3,-5807,-5799,-8213,-8205
+StonePlantMound4,-5845,-5838,-8255,-8248
+StoneBoulder,-5856,-5847,-8255,-8246

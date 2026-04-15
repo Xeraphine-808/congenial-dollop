@@ -1,0 +1,5 @@
+ShrineSmallWater,-5624,-5616,-8894,-8886
+ShrineSmallWater,-5632,-5624,-8884,-8876
+BlazeSpawnerCrystal,-5462,-5456,-8975,-8969
+SmallClockworkSite,-5468,-5446,-9099,-9080
+ShrineSmallFire,-5530,-5520,-8752,-8742

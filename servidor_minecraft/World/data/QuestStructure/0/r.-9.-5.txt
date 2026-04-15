@@ -119,3 +119,5 @@ StoneMazePagoda,-4891,-4844,-2620,-2573
 P_SpookyHouse,-4902,-4862,-2663,-2637
 P_PlainsCity,-5209,-5027,-2767,-2561
 StonePlantMound2,-4938,-4926,-2854,-2841
+RLCraft_SwampHut,-4787,-4747,-2664,-2632
+ForestBeacon,-4841,-4833,-2810,-2802

@@ -1,0 +1,6 @@
+StonePlantMound,8272,8277,1012,1017
+RLCraft_DecentWitch,8318,8318,989,989
+RLCraft_UndergroundRuin2,8313,8320,984,994
+StonePlantMound3,8279,8290,877,886
+RLCraft_SmallTown,8235,8306,859,934
+StonePlantMound4,8314,8321,929,936

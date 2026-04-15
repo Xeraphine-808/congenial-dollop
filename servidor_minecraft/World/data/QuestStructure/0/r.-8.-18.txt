@@ -1,0 +1,7 @@
+VillageTriplets,-4606,-4592,-9644,-9630
+P_VillageHouse2,-4608,-4591,-9610,-9593
+VillageMarketplace,-4570,-4556,-9630,-9616
+P_Village2Story,-4553,-4540,-9610,-9604
+VillageHouseRich1,-4594,-4573,-9573,-9555
+VillageWoodMill,-4570,-4554,-9608,-9595
+P_VillageFarmhouse,-4570,-4558,-9588,-9576

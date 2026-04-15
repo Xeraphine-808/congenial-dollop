@@ -1,1 +1,8 @@
 StonePlantMound,-4105,-4100,-2869,-2864
+RLCraft_cryo_bit,-4245,-4220,-2602,-2577
+StoneLeafMound,-4112,-4103,-2761,-2754
+BrickHenge,-4145,-4129,-2703,-2687
+StonePlantMound1,-4178,-4172,-2835,-2829
+RLCraft_SmallUndergroundSkeleton,-4197,-4189,-2633,-2625
+StonePlantMound1,-4259,-4253,-2861,-2855
+StonePlantMound,-4185,-4180,-2869,-2864

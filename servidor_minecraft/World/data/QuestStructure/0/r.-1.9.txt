@@ -1,0 +1,4 @@
+ShrineSmallWater,-904,-896,5066,5074
+ShrineSmallFire,-884,-874,5074,5084
+RLCraft_AgentStarbuck_WaterBase,-1029,-1012,5089,5101
+P_VillageBlacksmith,-1030,-1016,4809,4842

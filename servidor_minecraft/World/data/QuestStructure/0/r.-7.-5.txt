@@ -151,3 +151,15 @@ StoneMazeBig,-4035,-3988,-3053,-3006
 RLCraft_SmallUndergroundSkeleton,-3944,-3936,-3048,-3040
 StonePlantMound,-4089,-4084,-3064,-3059
 StonePlantMound4,-4097,-4090,-2937,-2930
+StonePlantMound2,-3625,-3613,-2619,-2606
+RLCraft_PlainsCamp,-3688,-3642,-2622,-2583
+Tree_Oak_TheMushroomOak_v3,-3622,-3572,-2665,-2606
+RLCraft_BasicSpider,-3660,-3660,-2684,-2684
+RLCraft_UndergroundRuin1,-3666,-3657,-2690,-2681
+StonePlantMound4,-3704,-3697,-2677,-2670
+StonePlantMound1,-3597,-3591,-3008,-3002
+DinosaurSkeleton,-3617,-3608,-3052,-3006
+RLCraft_LargeUndergroundTown,-3753,-3616,-2892,-2779
+StonePlantMound1,-3691,-3685,-3031,-3025
+StonePlantMound1,-3799,-3793,-3028,-3022
+ShrineSmallAir,-3726,-3718,-3025,-3017

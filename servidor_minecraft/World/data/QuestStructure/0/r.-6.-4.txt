@@ -1,0 +1,10 @@
+RLCraft_LargeUndergroundTown,-3634,-3521,-2551,-2414
+StonePlantMound3,-3575,-3564,-2291,-2282
+StonePlantMound4,-3559,-3552,-2272,-2265
+RLCraft_BasicZombie,-3487,-3487,-2530,-2530
+RLCraft_UndergroundRuin1,-3493,-3484,-2533,-2524
+StonePlantMound3,-3504,-3495,-2563,-2552
+RLCraft_SmallUndergroundSkeleton,-3464,-3456,-2413,-2405
+StoneLeafMound,-3446,-3437,-2459,-2452
+StonePlantMound,-3425,-3420,-2544,-2539
+StonePlantBoulder,-3396,-3386,-2517,-2507
